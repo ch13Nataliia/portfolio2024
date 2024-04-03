@@ -11,6 +11,7 @@ import MongoDB_logo from '../../assets/mySkills/mongoDB-logo.png';
 import Js_logo from '../../assets/mySkills/js-logo.png';
 import Html_logo from '../../assets/mySkills/html-logo.png';
 
+
 const imagesLogo = [
   {
     id: 2,
