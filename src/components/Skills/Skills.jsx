@@ -78,20 +78,21 @@ const imagesLogo = [
 const Skills = () => {
   const imgSize = {
     width: '100%',
-    height: '250px',
-    backgroundSize: 'cover',
   };
   return (
     <>
       <div>
-        <div className="container pb-8 sm:pb-0">
-          <div className="grid gap-4 grid-cols-3 grid-rows-3">
+        <div className="container pb-8 sm:pb-0  ">
+        <div>
+          <h1 className='text-3xl sm:text-4xl text-center m-5'>My Skills</h1>
+        </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
             {imagesLogo.map((item) => (
               <>
-                <div key={item.id}>
+                <div key={item.id} className='shadow-md rounded-lg'>
                   <img src={item.img} style={imgSize} />
                   <div className="flex text-center items-center justify-center">
-                    <p className="text-2xl font-semibold"> {item.name}</p>
+                    <p className="text-2xl font-semibold"> </p>
                   </div>
                 </div>
               </>

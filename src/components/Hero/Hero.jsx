@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <>
       <div>
-        <div className="container pb-8 sm:pb-0 shadow-lg mt-8">
+        <div className="container pb-8 sm:pb-0  mt-8">
           {' '}
           <div className="grid grid-cols-1 sm:grid-cols-2">
             <div
