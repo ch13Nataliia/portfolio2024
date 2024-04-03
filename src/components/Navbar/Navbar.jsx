@@ -1,11 +1,10 @@
 import DarkMode from './DarkMode';
 
-
-const Menu =[
+const Menu = [
   {
     id: 1,
     name: 'Home',
-    link: '/',
+    link: '/#',
   },
   {
     id: 2,
@@ -27,31 +26,41 @@ const Menu =[
     name: 'Contact',
     link: '/#contact',
   },
+];
 
-]
 const Navbar = () => {
   return (
     <>
-      <div>
-        <div>
-          <div>
+      <div className="shadow-lg bg-white dark:bg-gray-900 dark:text-white duration-200">
+        <div className="container py-3 sm:py-0">
+          <div className="flex items-center justify-between">
             <div>
-              <a href="#" className="font bold text-2xl sm:text-3xl flex gap-4">
+              <a
+                href="#"
+                className="font-bold text-2xl sm:text-3xl flex gap-4"
+              >
                 Nataliia Tsirul
               </a>
             </div>
 
             {/* menu section */}
-            <div>
+            <div className="flex items-center justify-between font-semibold gap-8 ">
               <div>
                 <DarkMode />
               </div>
-              <ul>{
-                Menu.map((data) => (
-                  <li key={data.id}><a href={data.link}>{data.name}</a></li>
-                ))
-              }
-                </ul>
+              <ul className=" hidden sm:flex items-center font-semibold gap-4 ">
+                {Menu.map((data) => (
+                  <li key={data.id}>
+                    <a
+                      href={data.link}
+                      className="inline-block py-4 px-4 hover:text-primary duration-200"
+                    >
+                      {data.name}
+                    </a>
+                  </li>
+                ))}
+                {/* dropdown section */}
+              </ul>
             </div>
           </div>
         </div>
