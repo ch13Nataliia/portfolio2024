@@ -35,25 +35,18 @@ const Navbar = () => {
         <div className="container py-3 sm:py-0">
           <div className="flex items-center justify-between">
             <div>
-              <a
-                href="#"
-                className="font-bold text-2xl sm:text-3xl flex gap-4"
-              >
+              <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-4">
                 Nataliia Tsirul
               </a>
             </div>
-
             {/* menu section */}
-            <div className="flex items-center justify-between font-semibold gap-8 ">
-              <div>
-                <DarkMode />
-              </div>
-              <ul className=" hidden sm:flex items-center font-semibold gap-4 ">
+            <nav className="hidden sm:flex items-center justify-between font-semibold gap-8 ">
+              <ul className=" flex  items-center font-semibold gap-4 ">
                 {Menu.map((data) => (
                   <li key={data.id}>
                     <a
                       href={data.link}
-                      className="inline-block py-4 px-4 hover:text-primary duration-200"
+                      className="inline-block py-4 px-4 hover:text-primary duration-200 transition-all duration-400"
                     >
                       {data.name}
                     </a>
@@ -61,8 +54,11 @@ const Navbar = () => {
                 ))}
                 {/* dropdown section */}
               </ul>
+            </nav>{' '}
+            <div>
+              <DarkMode />
             </div>
-          </div>
+          </div>{' '}
         </div>
       </div>
     </>

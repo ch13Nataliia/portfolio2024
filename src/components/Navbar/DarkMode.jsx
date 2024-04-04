@@ -1,7 +1,7 @@
 // import React from 'react'
 import { useEffect, useState } from 'react';
-import { LuSunMoon } from 'react-icons/lu';
-import { FaMoon } from 'react-icons/fa';
+
+import { BiSolidSun, BiSolidMoon } from 'react-icons/bi';
 
 const DarkMode = () => {
   const [theme, setTheme] = useState(
@@ -11,34 +11,22 @@ const DarkMode = () => {
   const element = document.documentElement;
 
   useEffect(() => {
-    if (theme === 'dark') {
-      element.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
+    if (theme === "dark") {
+      element.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
-      element.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
+      element.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
-  }, [theme]);
+  }, [theme, element.classList]);
 
   return (
     <>
-      <div className='relative'>
-       <FaMoon
-          onClick={() =>
-            setTheme((data) => (data === 'dark' ? 'light' : 'dark'))
-          }
-          className={`w-12 cursor-pointer drop-shadow-[1px_1px_1px_rgba(0,0,0,0.1)] transition-all duration-300 absolute right-0 z-10  ${ 
-            theme === 'dark' ? 'opacity-0' : 'opacity-100'
-          } `}
-        />
-
-        <LuSunMoon
-          onClick={() =>
-            setTheme((data) => (data === 'dark' ? 'light' : 'dark'))
-          }
-          className="w-12 cursor-pointer drop-shadow-[1px_1px_2px_rgba(0,0,0,0.5)] duration-300 "
-        />
-      </div>
+      {theme === 'dark' ? (
+        <BiSolidSun onClick={() => setTheme('light')} className="text=2xl" />
+      ) : (
+        <BiSolidMoon onClick={() => setTheme('dark')} className="text=2xl" />
+      )}
     </>
   );
 };
