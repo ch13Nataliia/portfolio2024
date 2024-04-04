@@ -63,7 +63,7 @@ const ProjectData = [
   to dispay date for users.`,
   },
 ];
-const Projects = () => {
+const New_Projects = () => {
   const projectContainer = {
     width: '100%',
   };
@@ -72,7 +72,7 @@ const Projects = () => {
       <div>
         <div className="container pb-8 sm:pb-0 dark:bg-gray-800 dark:text-white">
           <div className="text-center text-4xl m-3 p-3 capitalize ">
-            <h2>projects 2023</h2>
+            <h2>projects 2024</h2>
           </div>
 
           <div
@@ -108,4 +108,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default New_Projects;

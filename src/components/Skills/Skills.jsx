@@ -11,66 +11,65 @@ import MongoDB_logo from '../../assets/mySkills/mongoDB-logo.png';
 import Js_logo from '../../assets/mySkills/js-logo.png';
 import Html_logo from '../../assets/mySkills/html-logo.png';
 
-
 const imagesLogo = [
   {
-    id: 2,
+    id: 1,
     img: CssLogo,
     name: 'Css',
   },
 
   {
-    id: 10,
+    id: 2,
     img: Js_logo,
     name: 'Java script',
   },
   {
-    id: 11,
+    id: 3,
     img: Html_logo,
     name: 'HTML',
   },
 
   {
-    id: 7,
+    id: 4,
     img: ReactLogo,
     name: 'React',
   },
 
   {
-    id: 9,
+    id: 5,
     img: Node_logo,
     name: 'Node.js',
   },
 
   {
-    id: 1,
+    id: 6,
     img: Bootstrap,
     name: 'Bootstrap',
   },
 
   {
-    id: 3,
+    id: 7,
     img: Docker,
     name: 'Docker',
   },
   {
-    id: 4,
+    id: 8,
     img: GitHub,
     name: 'GitHub',
   },
   {
-    id: 5,
+    id: 9,
     img: Railway,
     name: 'Railway',
   },
   {
-    id: 6,
+    id: 10,
     img: SQLImg,
     name: 'SQL',
   },
 
   {
-    id: 8,
+    id: 11,
     img: MongoDB_logo,
     name: 'MongoDB',
   },
@@ -83,19 +82,17 @@ const Skills = () => {
     <>
       <div>
         <div className="container pb-8 sm:pb-0  ">
-        <div>
-          <h1 className='text-3xl sm:text-4xl text-center m-5'>My Skills</h1>
-        </div>
+          <div>
+            <h1 className="text-3xl sm:text-4xl text-center m-5">My Skills</h1>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
             {imagesLogo.map((item) => (
-              <>
-                <div key={item.id} className='shadow-md rounded-lg'>
-                  <img src={item.img} style={imgSize} />
-                  <div className="flex text-center items-center justify-center">
-                    <p className="text-2xl font-semibold"> </p>
-                  </div>
+              <div key={item.id} className="shadow-md rounded-lg">
+                <img src={item.img} style={imgSize} />
+                <div className="flex text-center items-center justify-center">
+                  <p className="text-2xl font-semibold"> </p>
                 </div>
-              </>
+              </div>
             ))}
           </div>
         </div>

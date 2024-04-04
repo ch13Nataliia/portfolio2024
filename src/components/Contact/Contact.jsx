@@ -50,9 +50,12 @@ const Contact = () => {
                         rows="10"
                       ></textarea>
                     </label>
-                    <button onClick={() => {}}
-              className="border border-gray-300 rounded-full p-2 bg-primary/30 hover:bg-primary hover:text-white dark:bg-yellow-500 dark:text-gray-800 dark:hover:bg-yellow-600 mb-6"
-            >submit</button>
+                    <button
+                      onClick={() => {}}
+                      className="border border-gray-300 rounded-full p-2 bg-primary/30 hover:bg-primary hover:text-white dark:bg-yellow-500 dark:text-gray-800 dark:hover:bg-yellow-600 mb-6"
+                    >
+                      submit
+                    </button>
                   </div>
                 </div>
               </div>
